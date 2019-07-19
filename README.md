@@ -1,4 +1,4 @@
-# ADIP2.jl
+# ADIP<sup>2</sup>.jl
 ## Automatic Differentiation of Interatomic Potentials with Phonons in Julia
 
 This is a proof of concept code to see the capability and peformance in using automatic differentiation through the ForwardDiff.jl or ReverseDiff.jl packages. The main use case for this program is to be able to calculate the atomic forces and force constants (i.e. Hessian matrix) for an energy function/routinecall, e.g., lattice sums to get the total energy of a structure. This can then be used to obtain useful lattice properties like phonon dispersion and elastic constants.
@@ -10,13 +10,13 @@ The standard library LinearAlgebra is required.
 
 There are two major julia packages that are required to run ADIP2.jl:
 
-![ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl)
-![HDF5.jl](https://github.com/JuliaIO/HDF5.jl)
+[ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl)
+[HDF5.jl](https://github.com/JuliaIO/HDF5.jl)
 
 The other required package is a C-API/library called SPGLIB, which provides the routines to determine the primitive unit cell, spacegroup ID, and irreducible reciprocal space mesh. The interface julia module is called SpglibWrapper.jl and within this module
 the user needs to change the SPGLIB variable if the dynamical library is not located within the extlib/SPGLIB folder.
 
-![SPGLIB](https://atztogo.github.io/spglib/)
+[SPGLIB](https://atztogo.github.io/spglib/)
 
 ## Supported potentials
 
@@ -62,9 +62,9 @@ The main driver code will output an HDF5 file that contains all the structural, 
 
 ## Benchmarks
 
-![Silicon](benchmarks/Silicon/Si_5.43A_3x3x3_Phonon.png)
+![Silicon](benchmarks/Silicon/Si_5.43A_3x3x3_Phonon.pdf| width=300)
 
-![Siliver](benchmarks/Silver/Ag_4.08A_3x3x3_Phonon.png)
+![Siliver](benchmarks/Silver/Ag_4.08A_3x3x3_Phonon.png | width=300)
 
 ## ISSUES
 
