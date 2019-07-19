@@ -62,9 +62,9 @@ The main driver code will output an HDF5 file that contains all the structural, 
 
 ## Benchmarks
 
-![Silicon](benchmarks/Silicon/Si_5.43A_3x3x3_Phonon.pdf| width=300)
+![Silicon](benchmarks/Silicon/Si_5.43A_3x3x3_Phonon.png =300x)
 
-![Siliver](benchmarks/Silver/Ag_4.08A_3x3x3_Phonon.png | width=300)
+![Siliver](benchmarks/Silver/Ag_4.08A_3x3x3_Phonon.png =300x)
 
 ## ISSUES
 
