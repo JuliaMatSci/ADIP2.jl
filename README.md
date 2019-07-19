@@ -11,6 +11,7 @@ The standard library LinearAlgebra is required.
 There are two major julia packages that are required to run ADIP2.jl:
 
 [ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl)
+
 [HDF5.jl](https://github.com/JuliaIO/HDF5.jl)
 
 The other required package is a C-API/library called SPGLIB, which provides the routines to determine the primitive unit cell, spacegroup ID, and irreducible reciprocal space mesh. The interface julia module is called SpglibWrapper.jl and within this module
@@ -23,6 +24,8 @@ the user needs to change the SPGLIB variable if the dynamical library is not loc
 1. Tersoff (LAMMPS compatible)
 2. Lennard-Jones
 3. EAM (Sutton analytical form)
+
+All units need to be in eV, Angstroms, and atomic mass units.
 
 ### Adding a potential energy function routine
 
@@ -40,9 +43,9 @@ To run the code from terminal:
 where `` yourscript.jl `` contains information about the structure and potential. There are three ``REQUIRED`` variables that should be in `` yourscript.jl `` they are:
 
 * ``basis`` is a Nx5 Array with columns: mass id x y z, coordinates need to be in fractional dimensions.
-* ``cell`` is a 3x3 Array with : ax ay az  in Angstroms
+* ``cell`` is a 3x3 Array with : ax ay az 
                                  bx by bz 
-				 cx cy cz
+				 cx cy cz in Angstroms
 * ``replicate`` is the number of replications in each dimensions after the program finds the primitive unit cell.				 
 * ``potinfo`` is a dictionary with keyword symbols `` :paramfile `` and ``:potname`` and values that are `` String `` and `` :Symbol `` data types, respectively.
 
@@ -62,9 +65,8 @@ The main driver code will output an HDF5 file that contains all the structural, 
 
 ## Benchmarks
 
-![Silicon](benchmarks/Silicon/Si_5.43A_3x3x3_Phonon.png =300x)
-
-![Siliver](benchmarks/Silver/Ag_4.08A_3x3x3_Phonon.png =300x)
+<img src="benchmarks/Silicon/Si_5.43A_3x3x3_Phonon.png" alt="Silicon" width="400"/>
+<img src="benchmarks/Silver/Ag_4.08A_3x3x3_Phonon.png" alt="Silver" width="400"/>
 
 ## ISSUES
 
