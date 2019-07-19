@@ -1,0 +1,28 @@
+#-> LAMMPS Potential File in Tersoff format.                              <-#
+# Source:  N. Juslin, et al., J. Appl. Phys. 98: 123520 (2005).
+# Implemented by K.D. Hammond (2010) karlh@berkeley.edu
+#
+# All entries are in "metal" units:
+#   A,B [=] eV; lambda1,lambda2,lambda3 [=] 1/Angstrom; R,D [=] Angstrom
+#   other quantities are unitless
+#
+# This particular paper makes the following symbol substitutions:
+#   A = D0/(S-1)*exp(-beta_*r0*sqrt(2*S))
+#   B = S*D0/(S-1)*exp(-beta_*r0*sqrt(2/S))
+#   n = 1
+#   m = 1
+#   lambda1 = beta_*sqrt(2*S)
+#   lambda2 = beta_*sqrt(2/S)
+#   lambda3 = alpha_{ijk}
+#   beta = omega_{ijk}
+#   costheta0 = -h
+#
+# Entries are of the form
+#   Element1 Element2 Element3 m gamma lambda3 c d costheta0 n beta lambda2
+#   B R D lambda1 A
+# and can be split over multiple lines as needed
+
+# Niklas versions
+# i , j,k, m,gamma,  lambda3,     c,         d,        costheta0,n,    beta,            lambda2,           B,              R,               D,               lambda1,      A
+W W W 1.0 0.00188227 0.45876000 2.14969000 0.17126000 0.27780000 1.0 1.00000000 1.411245889218 306.499679742153 3.500000 0.300000 2.719583728195 3401.474424137676
+
