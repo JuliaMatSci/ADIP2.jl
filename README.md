@@ -1,5 +1,6 @@
 # ADIP<sup>2</sup>.jl
 ## Automatic Differentiation of Interatomic Potentials with Phonons in Julia
+[![DOI](https://zenodo.org/badge/197701818.svg)](https://zenodo.org/badge/latestdoi/197701818)
 
 This is a proof of concept code to see the capability and peformance in using automatic differentiation through the ForwardDiff.jl or ReverseDiff.jl packages. The main use case for this program is to be able to calculate the atomic forces and force constants (i.e. Hessian matrix) for an energy function/routinecall, e.g., lattice sums to get the total energy of a structure. This can then be used to obtain useful lattice properties like phonon dispersion and elastic constants.
 
